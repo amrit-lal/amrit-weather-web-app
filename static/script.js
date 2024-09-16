@@ -10,7 +10,7 @@ function getWeather() {
     }
 
     // Call Flask backend to get weather data
-    fetch(`http://127.0.0.1:5000/weather?city=${city}`)
+    fetch(`/weather?city=${city}`)
         .then(response => response.json())
         .then(data => {
             if (data.error) {
